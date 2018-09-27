@@ -22,7 +22,7 @@ class App extends Component {
       <div className='message-list'>
         {DATA.map((message, index) =>{
           return (
-            <div>
+            <div key={index}>
               <div>
                {message.senderId}
              </div>
