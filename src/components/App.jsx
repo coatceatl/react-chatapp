@@ -1,37 +1,34 @@
 import React, {Component} from 'react';
-import MeassgeList from './MessageList.jsx';
+import Chatkit from '@pusher/chatkit';
+import MessageList from './MessageList.jsx';
 
-const DATA = [
-  {
-    senderId: 'jane',
-    text: 'Hey',
-  },
-  {
-    senderId: 'peter',
-    text: 'Good to hear you!',
-  },
-  {
-    senderId: 'jane',
-    text: 'Great! How about you?',
-  },
-]
+import { tokenUrl, instanceLocator } from '../../config.js';
 
 class App extends Component {
+  componentDidMount() {
+    const chatManager = new Chatkit.ChatManager({
+      instanceLocator,
+      userId: 'jane',
+      tokenProvider: new Chatkit.TokenProvider({ url: tokenUrl })
+    })
+
+    chatManager.connect()
+      .then(currentUser => {
+        currentUser.subscribeToRoom({
+          roomId: 17236968,
+          hooks: {
+            onNewMessage: message => {
+              console.log('message.text ' + message.text);
+            }
+          }
+        })
+      })
+  }
+
   render() {
     return (
-      <div className='message-list'>
-        {DATA.map((message, index) =>{
-          return (
-            <div key={index}>
-              <div>
-               {message.senderId}
-             </div>
-             <div>
-               {message.text}
-             </div>
-            </div>
-          )
-        })}
+      <div className='app'>
+        {/*       <MessageList />*/}
       </div>
     )
   }
