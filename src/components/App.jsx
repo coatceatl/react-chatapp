@@ -24,7 +24,9 @@ class App extends Component {
     const chatManager = new Chatkit.ChatManager({
       instanceLocator,
       userId: 'jane',
-      tokenProvider: new Chatkit.TokenProvider({ url: tokenUrl })
+      tokenProvider: new Chatkit.TokenProvider({
+        url: tokenUrl
+      })
     })
 
     chatManager.connect()
@@ -42,11 +44,12 @@ class App extends Component {
           joinableRooms,
           joinedRooms: this.currentUser.rooms
         })
-        })
+      })
       .catch(err => console.log('error om joinableRooms '))
     }
 
     subscribeToRoom(roomId) {
+      this.setState({ messages: [] })
       this.currentUser.subscribeToRoom({
           roomId: roomId,
           hooks: {
