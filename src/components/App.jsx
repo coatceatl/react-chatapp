@@ -30,9 +30,7 @@ class App extends Component {
     chatManager.connect()
       .then(currentUser => {
         this.currentUser = currentUser
-
         this.getRooms()
-        this.subscribeToRoom()
       })
       .catch(err => console.log('error on connecting '))
   }
@@ -48,9 +46,9 @@ class App extends Component {
       .catch(err => console.log('error om joinableRooms '))
     }
 
-    subscribeToRoom() {
+    subscribeToRoom(roomId) {
       this.currentUser.subscribeToRoom({
-          roomId: 17236968,
+          roomId: roomId,
           hooks: {
             onNewMessage: message => {
               this.setState({
@@ -71,7 +69,9 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <RoomList rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]} />
+        <RoomList
+          subscribeToRoom={this.subscribeToRoom}
+          rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]} />
         <MessageList messages={this.state.messages}/>
         <MessageForm sendMessage={this.sendMessage}/>
       </div>
