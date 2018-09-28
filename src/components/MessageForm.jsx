@@ -8,6 +8,7 @@ class MessageForm extends Component {
       message: ''
     }
     this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange(e) {
@@ -16,12 +17,20 @@ class MessageForm extends Component {
     })
   }
 
+  handleSubmit(e) {
+    e.preventDefault()
+    console.log(this.state.message)
+  }
+
   render() {
     console.log(this.state.message)
     return (
-      <form className='message-form'>
+      <form
+        onSubmit={this.handleSubmit}
+        className='message-form'>
         <input
           onChange={this.handleChange}
+          value={this.state.message}
           placeholder='Type your message and hit ENTER'
           type='text' />
       </form>
