@@ -1,1 +1,35 @@
+.message-list {
+  padding: 10px;
+  height: calc(100% - 55px); }
+
+.message-text {
+  display: inline;
+  background-color: lightgreen;
+  padding: 4px 8px;
+  border-radius: 10px; }
+
+.message-username {
+  margin-top: 10px;
+  margin-bottom: 2px;
+  color: gray; }
+
+.message-form {
+  display: flex; }
+  .message-form input {
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #dcf7dc;
+    font-size: 20px;
+    height: 55px; }
+
+body {
+  margin: 0; }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw; }
 

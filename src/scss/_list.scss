@@ -1,0 +1,15 @@
+.message-list {
+  padding: 10px;
+  height: calc(100% - 55px);
+}
+.message-text {
+  display: inline;
+  background-color: lightgreen;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+.message-username {
+  margin-top: 10px;
+  margin-bottom: 2px;
+  color: gray;
+}

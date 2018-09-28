@@ -1,1 +1,12 @@
+@import '_list.scss';
+@import '_form.scss';
 
+body {
+  margin: 0;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}

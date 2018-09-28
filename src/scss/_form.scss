@@ -1,0 +1,12 @@
+.message-form {
+  display: flex;
+  & input {
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #dcf7dc;
+    font-size: 20px;
+    height: 55px;
+  }
+}
