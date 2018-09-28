@@ -40,6 +40,7 @@ class App extends Component {
     return (
       <div className='app'>
         <MessageList messages={this.state.messages}/>
+        <MessageForm />
       </div>
     )
   }
