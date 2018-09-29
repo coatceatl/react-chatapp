@@ -11,6 +11,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
+      roomId: null,
       messages: [],
       joinableRooms: [],
       joinedRooms: []
@@ -60,12 +61,19 @@ class App extends Component {
             }
           }
         })
+        .then(room => {
+          this.setState({
+            roomId: room.id
+          })
+          this.getRooms()
+        })
+        .catch(err => console.log('error on subscribing room'))
     }
 
   sendMessage(text) {
     this.currentUser.sendMessage({
       text,
-      roomId: 17236968
+      roomId: this.state.roomId
     })
   }
 
