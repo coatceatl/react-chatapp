@@ -1,0 +1,16 @@
+.room-list {
+  width: 20%;
+  background-color: lightgreen;
+  color: white;
+  & ul {
+    list-style: none;
+    overflow: scoll;
+  }
+}
+.room {
+  margin: 10px auto;
+  & a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
