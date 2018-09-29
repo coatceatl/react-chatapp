@@ -2,6 +2,10 @@
   width: 20%;
   background-color: lightgreen;
   color: white;
+  position: absolute;
+  top: 0;
+  bottom: 85px;
+  left: 0;
   & ul {
     list-style: none;
     overflow: scoll;
