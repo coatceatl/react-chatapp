@@ -1,6 +1,9 @@
 .message-list {
   width: 80%;
   padding: 10px; }
+  @media (max-width: 992px) {
+    .message-list {
+      width: 50%; } }
 
 .message-text {
   display: inline;
@@ -37,6 +40,9 @@
   .room-list ul {
     list-style: none;
     overflow: scoll; }
+  @media (max-width: 992px) {
+    .room-list {
+      width: 50%; } }
 
 .room {
   margin: 10px auto; }

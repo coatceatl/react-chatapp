@@ -6,6 +6,9 @@
     list-style: none;
     overflow: scoll;
   }
+  @media(max-width: 992px) {
+    width: 50%;
+  }
 }
 .room {
   margin: 10px auto;

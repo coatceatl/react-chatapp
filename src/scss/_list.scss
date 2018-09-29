@@ -1,6 +1,9 @@
 .message-list {
   width: 80%;
   padding: 10px;
+  @media(max-width: 992px) {
+    width: 50%;
+  }
 }
 .message-text {
   display: inline;
