@@ -7,9 +7,10 @@ class RoomForm extends Component {
         <form>
           <input
             type='text'
+            className='room-input'
             placeholder='New Room'
             required />
-          <button type='submit'> + </button>
+          <button type='submit' className='btn-room'> + </button>
         </form>
       </div>
     )
