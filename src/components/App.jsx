@@ -3,6 +3,7 @@ import Chatkit from '@pusher/chatkit';
 import MessageList from './MessageList.jsx';
 import MessageForm from './MessageForm.jsx';
 import RoomList from './RoomList.jsx';
+import RoomForm from './RoomForm.jsx';
 
 import { tokenUrl, instanceLocator } from '../../config.js';
 
@@ -85,6 +86,7 @@ class App extends Component {
           subscribeToRoom={this.subscribeToRoom}
           rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]} />
         <MessageList messages={this.state.messages}/>
+        <RoomForm />
         <MessageForm sendMessage={this.sendMessage}/>
       </div>
     )
