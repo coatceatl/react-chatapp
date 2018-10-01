@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 class RoomList extends Component {
   render() {
-    console.log(this.props.rooms)
     return (
       <div className='room-list'>
         <ul>
