@@ -31,6 +31,7 @@ class MessageForm extends Component {
         onSubmit={this.handleSubmit}
         className='message-form'>
         <input
+          disabled={this.props.disabled}
           onChange={this.handleChange}
           value={this.state.message}
           placeholder='Type your message and hit ENTER'

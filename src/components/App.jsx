@@ -95,9 +95,10 @@ class App extends Component {
           rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]}
           roomId={this.state.roomId} />
         <MessageList
+          roomId={this.state.roomId}
           messages={this.state.messages} />
         <MessageForm
-          roomId={this.state.roomId}
+          disabled={!this.state.roomId}
           sendMessage={this.sendMessage} />
         <RoomForm
           createRoom={this.createRoom} />
