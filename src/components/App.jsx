@@ -97,6 +97,7 @@ class App extends Component {
         <MessageList
           messages={this.state.messages} />
         <MessageForm
+          roomId={this.state.roomId}
           sendMessage={this.sendMessage} />
         <RoomForm
           createRoom={this.createRoom} />
