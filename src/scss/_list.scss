@@ -8,7 +8,11 @@
   left: 20%;
   overflow: scroll;
   @media(max-width: 992px) {
-    width: 50%;
+    width: 70%;
+    left: 30%;
+  }
+  @media(max-width: 576px) {
+    width: 100%;
   }
 }
 .message-text {

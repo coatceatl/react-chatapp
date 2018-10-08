@@ -9,9 +9,13 @@
   & ul {
     list-style: none;
     overflow: scoll;
+    padding-left: 15px;
   }
   @media(max-width: 992px) {
-    width: 50%;
+    width: 30%;
+  }
+  @media(max-width: 576px) {
+    width: 100%;
   }
 }
 .room {

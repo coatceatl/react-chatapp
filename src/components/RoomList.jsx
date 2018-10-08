@@ -5,7 +5,7 @@ class RoomList extends Component {
     return (
       <div className='room-list'>
         <ul>
-          <h1>My Room</h1>
+          <h1>Chats</h1>
           {this.props.rooms.map(room => {
             const active = this.props.roomId === room.id ? 'active' : '';
             return (

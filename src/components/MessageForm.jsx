@@ -34,7 +34,7 @@ class MessageForm extends Component {
           disabled={this.props.disabled}
           onChange={this.handleChange}
           value={this.state.message}
-          placeholder='Type your message and hit ENTER'
+          placeholder='Type your message ...'
           type='text' />
       </form>
     )

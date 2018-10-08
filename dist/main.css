@@ -9,7 +9,11 @@
   overflow: scroll; }
   @media (max-width: 992px) {
     .message-list {
-      width: 50%; } }
+      width: 70%;
+      left: 30%; } }
+  @media (max-width: 576px) {
+    .message-list {
+      width: 100%; } }
 
 .message-text {
   display: inline;
@@ -45,6 +49,13 @@
     background-color: #dcf7dc;
     font-size: 20px;
     height: 55px; }
+  @media (max-width: 992px) {
+    .message-form {
+      width: 70%;
+      left: 30%; } }
+  @media (max-width: 576px) {
+    .message-form {
+      width: 100%; } }
 
 .room-list {
   width: 20%;
@@ -56,10 +67,14 @@
   left: 0; }
   .room-list ul {
     list-style: none;
-    overflow: scoll; }
+    overflow: scoll;
+    padding-left: 15px; }
   @media (max-width: 992px) {
     .room-list {
-      width: 50%; } }
+      width: 30%; } }
+  @media (max-width: 576px) {
+    .room-list {
+      width: 100%; } }
 
 .room {
   margin: 10px auto; }
@@ -83,14 +98,23 @@
   height: 85px; }
   .room-form form {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    background-color: #eae7e7; }
+  @media (max-width: 992px) {
+    .room-form {
+      width: 30%; } }
+  @media (max-width: 576px) {
+    .room-form {
+      width: 100%; } }
 
 .room-input {
   width: 85%;
   height: 100%;
   background-color: #eae7e7;
   border: none;
-  font-size: 20px; }
+  font-size: 20px;
+  padding-left: 10px;
+  margin-right: -10px; }
   .room-input:focus {
     outline: none; }
 
@@ -100,7 +124,8 @@
   height: 102%;
   font-size: 40px;
   opacity: 0.6;
-  border: none; }
+  border: none;
+  padding: 0; }
   .btn-room:focus {
     outline: none; }
 
@@ -112,4 +137,7 @@ body {
   min-height: 100vh;
   width: 100vw;
   position: relative; }
+  @media (max-width: 576px) {
+    .app {
+      flex-direction: column; } }
 
