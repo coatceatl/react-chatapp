@@ -26,7 +26,6 @@ class MessageForm extends Component {
   }
 
   render() {
-    console.log(this.state.message)
     return (
       <form
         onSubmit={this.handleSubmit}
